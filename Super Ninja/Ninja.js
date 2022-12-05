@@ -32,8 +32,8 @@ class Ninja {
     }
     
     speakWisdom(){
-        const speak= super.drinkSake();
-        console.log(speak);
+        super.drinkSake();
+        console.log("hello");
     }
 
   }
