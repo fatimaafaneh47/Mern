@@ -6,16 +6,16 @@ class Ninja {
       this.strength = 3;
     }
     sayName() {
-      console.log(`${this.name}`);
+      console.log(`${this.constructor.name}`);
       return this;
     }
     showStats() {
-      console.log(`Your name is ${this.name} and its health ${this.health} and its speed 
+      console.log(`Your name is ${this.constructor.name} and its health ${this.health} and its speed 
           is ${this.speed}and its strength is ${this.strength}`);
       return this;
     }
     drinkSake() {
-      console.log(`${this.name} drank sake.`);
+      console.log(`${this.constructor.name} drank sake.`);
       this.health += 10;
       return this;
     }
