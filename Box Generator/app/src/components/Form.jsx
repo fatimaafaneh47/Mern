@@ -15,6 +15,7 @@ const Form=(props) => {
          setColors([...colors,{'width':width+'px','height':height+'px','color':color}])
          setColor("")
         console.log(colors)
+        console.log(e);
 }
   return (
     <div>

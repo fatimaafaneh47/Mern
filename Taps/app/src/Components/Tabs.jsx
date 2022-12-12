@@ -33,7 +33,7 @@ const Tabs = (props) => {
  
     return(
         <div>
-
+            
             { manytabs.map( (item, index) => {
         return <button style={ btnStyle } onClick={ (e) => onClickHandler(e, item) }>{ item }</button>
     })}
