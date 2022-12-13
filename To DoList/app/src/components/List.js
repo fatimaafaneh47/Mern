@@ -30,8 +30,6 @@
             const upadatedTodos = todos.map((todo,i) =>{
                 if (idx == i){
                     todo.complete= !todo.complete;
-                    // const upadatedTodos ={ ...todo,complete:!todo.complete};
-                    // return upadatedTodos;
                 }
                 return todo;
             });
