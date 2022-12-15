@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 
 const List = () => {
     const [pokemon, setPokemon] = useState([]);
-    const fetchPokemon = () => {
+    const fetchPokemon = () => { 
             fetch("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0%22")
                 .then(response => response.json())
                 .then(response => setPokemon(response.results))
