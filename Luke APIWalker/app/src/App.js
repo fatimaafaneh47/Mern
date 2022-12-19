@@ -4,6 +4,7 @@
   import {Router} from '@reach/router';
   import List from './components/List';
   import Person from './components/Person';
+  import Err from './components/Err';
 
 
   function App() {
@@ -12,6 +13,7 @@
         <List/>
       <Router>
       <Person path="/:type/:id" />
+      <Err path="/error"/>
       </Router>
       </div>
     );

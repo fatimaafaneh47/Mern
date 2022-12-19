@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { navigate } from '@reach/router'
 
 const Person = (props) => {
     const[people,setPeople]=useState("")
@@ -14,8 +15,12 @@ const Person = (props) => {
                   setPeople(response.data)
                   }
                   else{
-                      setPlanets(response.data)}
-          })},[props.id])  
+                    setPlanets(response.data)}
+            
+           
+        }).catch(()=>{
+            navigate("/error")
+        })},[props.id])
   return (
     <div>
         {props.type=="people"? <div> <h1>{people.name}</h1>
