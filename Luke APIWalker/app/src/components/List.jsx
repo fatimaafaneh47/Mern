@@ -4,7 +4,7 @@
   const List=(props)=> {
     const [type, setType] = useState("people");
     const [id, setId] = useState("");
-    
+       
     const handleSubmit=(e)=>{
         e.preventDefault()
         navigate("/"+type+"/"+id)}
@@ -20,7 +20,7 @@
           <input type="text" onChange={(e)=>setId(e.target.value)}/>
           <button>search</button>
           </form>
-          
+
         </div>
       )
     }

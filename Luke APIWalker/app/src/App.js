@@ -11,7 +11,7 @@
       <div className="App">
         <List/>
       <Router>
-      <Person path="/:search/:id" />
+      <Person path="/:type/:id" />
       </Router>
       </div>
     );
