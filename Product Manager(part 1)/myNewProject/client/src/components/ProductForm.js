@@ -1,6 +1,6 @@
 import React ,{useState} from 'react';
 import axios from 'axios';
-export default props =>{
+const ProductForm= props =>{
     const [title,setTitle]= useState("");
     const[price,setPrice]=useState();
     const[description,setDescription]=useState("");
@@ -20,7 +20,7 @@ return (
         <h1>Product Manager</h1>
         <p>
             <label>Title</label>
-            <input type="text" onChange={e=>setTitle(e.target.value)} value={title}></input>
+            <input type="text" onChange={e=>setTitle(e.target.value)} value={title} ></input>
         </p>
         <p>
             <label>Price</label>
@@ -34,3 +34,4 @@ return (
     </form>
 )
 }
+export default ProductForm;

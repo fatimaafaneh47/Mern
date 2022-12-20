@@ -1,13 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import ProductForm from './components/ProductForm';
 import Main from './views/Main';
+import Detail from './views/Detail';
+
 
 function App() {
-  return (
-    <div >
-      <Main />
+    return (
+    <div className="App">
+         <Routes>
+          <Route element={<Main/>} path="/products/" />  
+          <Route element={<Detail/>} path="/products/:id/" />   
+         </Routes>                        
     </div>
-  );
+    );
 }
-
 export default App;
