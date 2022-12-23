@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ProductForm from "../components/ProductForm";
+import DeleteButton from '../components/DeleteButton';
 
 const Update = (props) => {
 const { id } = useParams();
@@ -20,7 +21,7 @@ const updateProduct = product => {
     axios.put('http://localhost:8000/api/products/'+id, product)
         .then(res => console.log(res))
         .catch(err => console.error(err));
-        navigate("/products/"+id);
+        navigate("/products/");
 }
 return (
     <div>
@@ -30,6 +31,7 @@ return (
              initialTitle={product.title} 
              initialPrice={product.price}
             initialDescription={product.description}/>
+             <DeleteButton productId={product._id} successCallback={() => navigate("/products")} />
         </>
         )}
     </div>
